@@ -1,5 +1,5 @@
 Meteor.publish('allPosts', function(){
-  return Posts.find({}, {fields: {
+  return Posts.find({'author':'Tom'}, {fields: {
     date: false
   }});
 });
