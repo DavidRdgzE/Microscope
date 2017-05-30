@@ -21,3 +21,5 @@ insecure@1.0.7                # Allow all DB writes from clients (for prototypin
 twbs:bootstrap
 underscore@1.0.10
 iron:router
+ian:accounts-ui-bootstrap-3
+accounts-password
