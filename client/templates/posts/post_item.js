@@ -18,7 +18,8 @@ Template.postItem.helpers({
 	}
 });
 Template.postItem.events({
-	e.preventDefault();
-	Meteor.call('upvote', this._id);
-	}
+	'click .upvote': function(e) {
+		e.preventDefault();
+		Meteor.call('upvote', this._id);
+		}
 });
