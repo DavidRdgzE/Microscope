@@ -12,3 +12,8 @@ ownPost: function() {
     return Comments.find({postId: this._id}).count();
 }
 });
+Template.postItem.events({
+	e.preventDefault();
+	Meteor.call('upvote', this._id);
+	}
+});
