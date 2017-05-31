@@ -64,4 +64,12 @@ Meteor.publish('topPosts', function(limit) {
   sub.onStop(function() { postHandle.stop(); });
 });
 
+Meteor.publish('videos', function() {
+    var sub = this;
 
+    var videosCursor = Resources.find({type: 'video'});
+    Mongo.Collection._publishCursor(videosCursor, sub, 'videos');
+
+    // _publishCursor doesn't call this for us in case we do this more than once.
+    sub.ready();
+  });
