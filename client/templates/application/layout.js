@@ -1,7 +1,3 @@
-Template.layout.helpers({
-  pageTitle: function() { return Session.get('pageTitle'); }
-});
-
 Template.layout.onRendered(function() {
   this.find('#main')._uihooks = {
     insertElement: function(node, next) {
